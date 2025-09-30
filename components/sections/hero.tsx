@@ -56,7 +56,7 @@ export function Hero() {
                   size="lg"
                   className="hover:scale-105 transition-transform hover:bg-primary/10 bg-transparent"
                 >
-                  <Link href="/cv.pdf" target="_blank">
+                  <Link href="/my-portfolio/cv.pdf" target="_blank">
                     <Download className="mr-2 h-5 w-5" />
                     Download CV
                   </Link>
