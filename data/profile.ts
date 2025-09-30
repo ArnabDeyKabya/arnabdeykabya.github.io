@@ -1,6 +1,6 @@
 export const profile = {
   name: "Arnab Dey",
-  tagline: "CS Student • Cybersecurity & Adversarial ML",
+  tagline: "CS Student • Cybersecurity & Adversarial ML • Bioinformatics",
   location: "Titumir Hall, BUET, Dhaka, Bangladesh",
   phone: "+880-197-015-8202",
   email: "arnabdeykabya@gmail.com",
