@@ -13,7 +13,7 @@ export const projects = [
     year: "2025",
     repoUrl: "https://github.com/ArnabDeyKabya/Dormie",
     demoUrl: "#",
-    image: "/modern-hall-management-system-dashboard.jpg",
+    image: "/my-portfolio/modern-hall-management-system-dashboard.jpg",
   },
   {
     title: "C Compiler",
