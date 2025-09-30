@@ -28,7 +28,7 @@ export const projects = [
     techStack: ["C++", "Flex", "Bison"],
     year: "2024",
     repoUrl: "https://github.com/ArnabDeyKabya/Compiler-CSE-310",
-    image: "/compiler-code-syntax-tree-visualization.jpg",
+    image: "/my-portfolio/compiler-code-syntax-tree-visualization.jpg",
   },
   {
     title: "Movie Recommender System",
@@ -43,7 +43,7 @@ export const projects = [
     techStack: ["Python", "Scikit-learn", "Pandas", "NumPy"],
     year: "2024",
     repoUrl: "https://github.com/ArnabDeyKabya/Movie-Recommender-System",
-    image: "/movie-recommendation-machine-learning-interface.jpg",
+    image: "/my-portfolio/movie-recommendation-machine-learning-interface.jpg",
   },
   {
     title: "Kothin Train",
@@ -54,7 +54,7 @@ export const projects = [
     techStack: ["Python", "Django", "Bootstrap", "HTML", "CSS", "SQL", "Oracle", "REST API"],
     year: "2023",
     repoUrl: "https://github.com/chottosid/Kothin-Trains",
-    image: "/train-ticket-booking-web-application.jpg",
+    image: "/my-portfolio/train-ticket-booking-web-application.jpg",
   },
   {
     title: "TeXla",
@@ -69,7 +69,7 @@ export const projects = [
     techStack: ["Arduino", "ATmega32", "Bluetooth Module"],
     year: "2024",
     repoUrl: "#",
-    image: "/arduino-robot-car-gyroscope-control.jpg",
+    image: "/my-portfolio/arduino-robot-car-gyroscope-control.jpg",
   },
   {
     title: "Movie Database",
@@ -80,7 +80,7 @@ export const projects = [
     techStack: ["Java", "JavaFX", "CSS"],
     year: "2022",
     repoUrl: "https://github.com/ArnabDeyKabya/Movie-Database-2--2-JavaFx-Project-",
-    image: "/movie-database-desktop-application-interface.jpg",
+    image: "/my-portfolio/movie-database-desktop-application-interface.jpg",
   },
   {
     title: "Arrow Shooter",
@@ -91,6 +91,6 @@ export const projects = [
     techStack: ["C", "C++", "OpenGL"],
     year: "2022",
     repoUrl: "https://github.com/ArnabDeyKabya/Dart-Game-1---1-project-",
-    image: "/opengl-archer-game-3d-graphics.jpg",
+    image: "/my-portfolio/opengl-archer-game-3d-graphics.jpg",
   },
 ]
