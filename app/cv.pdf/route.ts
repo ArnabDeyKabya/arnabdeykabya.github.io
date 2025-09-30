@@ -1,16 +1,26 @@
 import { NextResponse } from "next/server"
+import { readFileSync } from "fs"
+import { join } from "path"
 
 export async function GET() {
-  // For now, return a message. User should replace this with actual CV file
-  return new NextResponse(
-    JSON.stringify({
-      message: "CV download endpoint. Please add your CV PDF file to the public folder and update this route.",
-    }),
-    {
+  try {
+    const filePath = join(process.cwd(), 'public', 'cv.pdf')
+    const fileBuffer = readFileSync(filePath)
+    
+    return new NextResponse(fileBuffer, {
       status: 200,
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/pdf',
+        'Content-Disposition': 'attachment; filename=cv.pdf'
       },
-    },
-  )
+    })
+  } catch (error) {
+    return new NextResponse(
+      JSON.stringify({ error: 'CV file not found' }),
+      { 
+        status: 404,
+        headers: { 'Content-Type': 'application/json' }
+      }
+    )
+  }
 }
