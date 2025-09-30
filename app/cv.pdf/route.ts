@@ -4,7 +4,7 @@ import { join } from "path"
 
 export async function GET() {
   try {
-    const filePath = join(process.cwd(), 'public', 'cv.pdf')
+    const filePath = join(process.cwd(), 'my-portfolio/public', 'cv.pdf')
     const fileBuffer = readFileSync(filePath)
     
     return new NextResponse(fileBuffer, {
