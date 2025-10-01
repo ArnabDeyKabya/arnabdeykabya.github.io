@@ -47,7 +47,7 @@ export function FeaturedProjects() {
             {featuredProjects.map((project, index) => (
               <Card
                 key={project.title}
-                className={`group hover:shadow-lg transition-all duration-300 ${
+                className={`group hover:shadow-xl hover:-translate-y-2 transition-all duration-300 hover:border-primary/30 hover:bg-gradient-to-br hover:from-card hover:to-primary/5 float-on-hover ${
                   isVisible ? `animate-scale-in animate-delay-${index * 100}` : "opacity-0"
                 }`}
               >

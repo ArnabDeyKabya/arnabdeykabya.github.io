@@ -1,0 +1,197 @@
+/* Enhanced Global Hover Effects */
+
+/* Icon hover effects */
+.lucide {
+  transition: all 0.3s ease-in-out;
+}
+
+.lucide:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 8px rgba(var(--primary), 0.25));
+}
+
+/* Image hover effects */
+img {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Link hover effects */
+a:not(.no-hover) {
+  transition: all 0.3s ease-in-out;
+}
+
+a:not(.no-hover):hover {
+  transform: translateY(-1px);
+}
+
+/* Stats/Number hover effects */
+.stat-number {
+  transition: all 0.3s ease-in-out;
+  cursor: default;
+}
+
+.stat-number:hover {
+  transform: scale(1.1);
+  color: hsl(var(--primary));
+  text-shadow: 0 0 20px rgba(var(--primary), 0.3);
+}
+
+/* Icon container hover effects */
+.icon-container {
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.icon-container::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, transparent, rgba(var(--primary), 0.1), transparent);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.icon-container:hover::before {
+  opacity: 1;
+}
+
+.icon-container:hover {
+  transform: scale(1.1) rotate(5deg);
+  background: rgba(var(--primary), 0.1);
+}
+
+/* Text hover effects for headings */
+h1, h2, h3, h4, h5, h6 {
+  transition: color 0.3s ease-in-out;
+}
+
+h1:hover, h2:hover, h3:hover {
+  color: hsl(var(--primary));
+  cursor: default;
+}
+
+/* Enhanced focus states */
+*:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced selection styling */
+::selection {
+  background: hsl(var(--primary) / 0.2);
+  color: hsl(var(--primary-foreground));
+}
+
+/* Hover effect for navigation items */
+nav a {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: hsl(var(--primary));
+  transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Enhanced box shadows on hover */
+.hover-glow:hover {
+  box-shadow: 
+    0 0 20px rgba(var(--primary), 0.1),
+    0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Ripple effect for interactive elements */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-effect::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(var(--primary), 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.ripple-effect:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Gradient text hover effect */
+.gradient-text-hover {
+  background: linear-gradient(45deg, hsl(var(--foreground)), hsl(var(--primary)));
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 0.3s ease-in-out;
+}
+
+.gradient-text-hover:hover {
+  background: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--primary)) 60%, hsl(var(--foreground)));
+  background-clip: text;
+  -webkit-background-clip: text;
+  transform: scale(1.05);
+}
+
+/* Floating animation for cards */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.float-on-hover:hover {
+  animation: float 2s ease-in-out infinite;
+}
+
+/* Pulsing glow effect */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(var(--primary), 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(var(--primary), 0.4), 0 0 30px rgba(var(--primary), 0.2);
+  }
+}
+
+.pulse-glow:hover {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
