@@ -36,14 +36,16 @@ export function Hero() {
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance">
                   <span className="text-foreground">{profile.name}</span>
                 </h1>
-                <div className="text-xl sm:text-2xl text-muted-foreground font-medium h-16 sm:h-14 lg:h-12 flex items-start">
+                <div className="text-xl sm:text-2xl text-muted-foreground font-medium h-16 sm:h-14 lg:h-12 flex items-start relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-purple-900/10 to-black/20 rounded-lg"></div>
+                  <div className="absolute inset-0 bg-gradient-radial from-pink-500/5 via-transparent to-transparent rounded-lg"></div>
                   <Typewriter
                     text={profile.tagline}
                     speed={0.08}
                     delay={500}
                     loop={true}
                     pauseTime={3000}
-                    className="w-full"
+                    className="w-full relative z-10"
                   />
                 </div>
               </div>

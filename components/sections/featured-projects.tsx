@@ -1,44 +1,56 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import Link from "next/link"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { ArrowRight, ExternalLink, Github } from "lucide-react"
-import { projects } from "@/data/projects"
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { projects } from "@/data/projects";
 
 export function FeaturedProjects() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
+          setIsVisible(true);
         }
       },
-      { threshold: 0.1 },
-    )
+      { threshold: 0.1 }
+    );
 
-    const element = document.getElementById("featured-projects")
-    if (element) observer.observe(element)
+    const element = document.getElementById("featured-projects");
+    if (element) observer.observe(element);
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
-  const featuredProjects = projects.slice(0, 3)
+  const featuredProjects = projects.slice(0, 3);
 
   return (
     <section id="featured-projects" className="py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className={`text-center mb-16 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Featured Projects</h2>
+          <div
+            className={`text-center mb-16 ${
+              isVisible ? "animate-fade-in-up" : "opacity-0"
+            }`}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Featured Projects
+            </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
-              A showcase of my technical expertise across full-stack development, machine learning, and systems
-              programming
+              A showcase of my technical expertise across full-stack
+              development, machine learning, and systems programming
             </p>
           </div>
 
@@ -48,7 +60,9 @@ export function FeaturedProjects() {
               <Card
                 key={project.title}
                 className={`group hover:shadow-xl hover:-translate-y-2 transition-all duration-300 hover:border-primary/30 hover:bg-gradient-to-br hover:from-card hover:to-primary/5 float-on-hover ${
-                  isVisible ? `animate-scale-in animate-delay-${index * 100}` : "opacity-0"
+                  isVisible
+                    ? `animate-scale-in animate-delay-${index * 100}`
+                    : "opacity-0"
                 }`}
               >
                 <CardHeader>
@@ -71,15 +85,23 @@ export function FeaturedProjects() {
                       )}
                     </div>
                   </div>
-                  <CardTitle className="group-hover:text-primary transition-colors">{project.title}</CardTitle>
+                  <CardTitle className="group-hover:text-primary transition-colors">
+                    {project.title}
+                  </CardTitle>
                   <CardDescription>{project.summary}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
-                    <p className="text-sm text-muted-foreground leading-relaxed">{project.description}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {project.description}
+                    </p>
                     <div className="flex flex-wrap gap-2">
                       {project.techStack.slice(0, 3).map((tech) => (
-                        <Badge key={tech} variant="secondary" className="text-xs">
+                        <Badge
+                          key={tech}
+                          variant="secondary"
+                          className="text-xs"
+                        >
                           {tech}
                         </Badge>
                       ))}
@@ -96,8 +118,17 @@ export function FeaturedProjects() {
           </div>
 
           {/* View All Button */}
-          <div className={`text-center ${isVisible ? "animate-fade-in-up animate-delay-400" : "opacity-0"}`}>
-            <Button asChild size="lg" variant="outline" className="group bg-transparent">
+          <div
+            className={`text-center ${
+              isVisible ? "animate-fade-in-up animate-delay-400" : "opacity-0"
+            }`}
+          >
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="group bg-transparent"
+            >
               <Link href="/projects">
                 View All Projects
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -107,5 +138,5 @@ export function FeaturedProjects() {
         </div>
       </div>
     </section>
-  )
+  );
 }

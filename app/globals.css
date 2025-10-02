@@ -4,6 +4,344 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Neon Glow Effects - Authentic Neon Tube Style */
+@keyframes neon-pulse {
+  0%, 100% {
+    text-shadow: 
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px #ff00de,
+      0 0 20px #ff00de,
+      0 0 30px #ff00de,
+      0 0 40px #ff00de,
+      0 0 50px #ff00de;
+    filter: brightness(1.2);
+  }
+  50% {
+    text-shadow: 
+      0 0 1px #fff,
+      0 0 2px #fff,
+      0 0 3px #fff,
+      0 0 5px #ff00de,
+      0 0 10px #ff00de,
+      0 0 15px #ff00de,
+      0 0 20px #ff00de,
+      0 0 25px #ff00de;
+    filter: brightness(0.8);
+  }
+}
+
+@keyframes neon-flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px #ff00de,
+      0 0 20px #ff00de,
+      0 0 30px #ff00de,
+      0 0 40px #ff00de;
+  }
+  20%, 24%, 55% {
+    text-shadow: 
+      0 0 1px #fff,
+      0 0 2px #fff,
+      0 0 3px #ff00de;
+  }
+}
+
+@keyframes neon-buzz {
+  0%, 100% {
+    text-shadow: 
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px #ff00de,
+      0 0 20px #ff00de,
+      0 0 30px #ff00de,
+      0 0 40px #ff00de,
+      0 0 50px #ff00de;
+  }
+  2% {
+    text-shadow: 
+      0 0 1px #fff,
+      0 0 2px #fff,
+      0 0 3px #ff00de;
+  }
+  8% {
+    text-shadow: 
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px #ff00de,
+      0 0 20px #ff00de,
+      0 0 30px #ff00de,
+      0 0 40px #ff00de;
+  }
+  17% {
+    text-shadow: 
+      0 0 1px #fff,
+      0 0 2px #fff,
+      0 0 3px #ff00de;
+  }
+  19% {
+    text-shadow: 
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px #ff00de,
+      0 0 20px #ff00de,
+      0 0 30px #ff00de,
+      0 0 40px #ff00de,
+      0 0 50px #ff00de;
+  }
+}
+
+.neon-glow {
+  color: #ff0080;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-shadow: 
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 6px #fff,
+    0 0 10px #ff00de,
+    0 0 20px #ff00de,
+    0 0 30px #ff00de,
+    0 0 40px #ff00de,
+    0 0 50px #ff00de;
+  animation: neon-buzz 8s infinite;
+  position: relative;
+}
+
+.neon-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 0, 222, 0.1), transparent);
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.neon-glow-static {
+  color: #ff0080;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-shadow: 
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 6px #fff,
+    0 0 10px #ff00de,
+    0 0 20px #ff00de,
+    0 0 30px #ff00de,
+    0 0 40px #ff00de;
+}
+
+.neon-cursor {
+  color: #ff0080;
+  font-weight: 700;
+  text-shadow: 
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 6px #fff,
+    0 0 10px #ff00de,
+    0 0 15px #ff00de,
+    0 0 20px #ff00de;
+  animation: neon-flicker 1.2s infinite;
+}
+
+/* Dark background enhancement for neon effect */
+.neon-container {
+  background: radial-gradient(ellipse at center, rgba(255, 0, 222, 0.03) 0%, transparent 70%);
+  border-radius: 8px;
+}
+
+/* Glowing Gradient Button Animations */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes button-glow {
+  0%, 100% {
+    box-shadow: 
+      0 0 5px rgba(255, 0, 222, 0.3),
+      0 0 10px rgba(255, 0, 222, 0.2),
+      0 0 15px rgba(255, 0, 222, 0.1),
+      0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 10px rgba(255, 0, 222, 0.5),
+      0 0 20px rgba(255, 0, 222, 0.3),
+      0 0 30px rgba(255, 0, 222, 0.2),
+      0 6px 25px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@keyframes button-pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+  }
+}
+
+@keyframes border-glow {
+  0%, 100% {
+    border-color: rgba(255, 0, 222, 0.3);
+    box-shadow: 
+      inset 0 0 10px rgba(255, 0, 222, 0.1),
+      0 0 10px rgba(255, 0, 222, 0.2);
+  }
+  50% {
+    border-color: rgba(255, 0, 222, 0.6);
+    box-shadow: 
+      inset 0 0 20px rgba(255, 0, 222, 0.2),
+      0 0 20px rgba(255, 0, 222, 0.4);
+  }
+}
+
+.gradient-button {
+  background: linear-gradient(
+    45deg,
+    #ff0080,
+    #ff00de,
+    #8000ff,
+    #0080ff,
+    #00ff80,
+    #80ff00,
+    #ff8000,
+    #ff0080
+  );
+  background-size: 400% 400%;
+  animation: gradient-shift 3s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.gradient-button:hover::before {
+  left: 100%;
+}
+
+.glow-button {
+  background: linear-gradient(45deg, #ff0080, #ff00de, #8000ff);
+  background-size: 200% 200%;
+  animation: gradient-shift 2s ease infinite, button-glow 2s ease-in-out infinite;
+  border: 1px solid rgba(255, 0, 222, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-button:hover {
+  animation: gradient-shift 1s ease infinite, button-glow 1s ease-in-out infinite, button-pulse 0.3s ease;
+  transform: translateY(-2px);
+}
+
+.outline-glow {
+  background: transparent;
+  border: 2px solid rgba(255, 0, 222, 0.4);
+  position: relative;
+  overflow: hidden;
+  animation: border-glow 2s ease-in-out infinite;
+}
+
+.outline-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255, 0, 222, 0.1), rgba(128, 0, 255, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.outline-glow:hover::before {
+  opacity: 1;
+}
+
+.outline-glow:hover {
+  border-color: rgba(255, 0, 222, 0.8);
+  box-shadow: 
+    0 0 20px rgba(255, 0, 222, 0.4),
+    inset 0 0 20px rgba(255, 0, 222, 0.1);
+  transform: translateY(-2px);
+}
+
+.ghost-glow:hover {
+  background: linear-gradient(45deg, rgba(255, 0, 222, 0.1), rgba(128, 0, 255, 0.1));
+  box-shadow: 0 0 15px rgba(255, 0, 222, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Special animation for primary buttons */
+.primary-glow {
+  background: linear-gradient(45deg, #ff0080, #ff00de, #8000ff, #ff0080);
+  background-size: 300% 300%;
+  animation: gradient-shift 3s ease infinite;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.primary-glow::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff0080, #ff00de, #8000ff, #ff0080);
+  background-size: 300% 300%;
+  animation: gradient-shift 3s ease infinite;
+  z-index: -1;
+  border-radius: inherit;
+  filter: blur(10px);
+  opacity: 0.7;
+}
+
+.primary-glow:hover {
+  animation: gradient-shift 1.5s ease infinite, button-pulse 0.3s ease;
+  transform: translateY(-3px);
+}
+
+.primary-glow:hover::after {
+  filter: blur(15px);
+  opacity: 1;
+}
+
 :root {
   /* Updated theme to match cybersecurity/research aesthetic with deep blues and teals */
   --background: oklch(1 0 0);

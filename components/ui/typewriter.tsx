@@ -31,11 +31,11 @@ export function Typewriter({
 
   return (
     <div
-      className={`min-h-[4rem] sm:min-h-[3.5rem] lg:min-h-[3rem] flex items-start ${className}`}
+      className={`min-h-[4rem] sm:min-h-[3.5rem] lg:min-h-[3rem] flex items-start neon-container ${className}`}
     >
-      <span>
+      <span className="neon-glow">
         {displayText}
-        {showCursor && <span className="animate-pulse text-primary">|</span>}
+        {showCursor && <span className="neon-cursor">|</span>}
       </span>
     </div>
   );
