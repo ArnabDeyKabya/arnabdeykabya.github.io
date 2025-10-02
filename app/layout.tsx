@@ -7,6 +7,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { PageNavigation } from "@/components/page-navigation"
 import { Suspense } from "react"
 
 export const metadata: Metadata = {
@@ -37,6 +38,7 @@ export default function RootLayout({
             <div className="min-h-screen flex flex-col">
               <Navigation />
               <main className="flex-1">{children}</main>
+              <PageNavigation />
               <Footer />
             </div>
           </Suspense>

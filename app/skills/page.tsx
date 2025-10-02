@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { skillsData } from "@/data/skills"
+import { extracurricularData } from "@/data/extracurricular"
 import {
   Code2,
   Wrench,
@@ -11,13 +12,15 @@ import {
   Lightbulb,
   FileCode,
   Settings,
+  Trophy,
+  Calendar,
 } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
 export const metadata: Metadata = {
-  title: "Skills | Arnab Dey",
-  description: "Technical skills, programming languages, frameworks, and tools",
+  title: "Skills & Extracurricular | Arnab Dey",
+  description: "Technical skills, programming languages, frameworks, tools, and extracurricular activities",
 }
 
 const iconMap: Record<string, any> = {
@@ -40,10 +43,10 @@ export default function SkillsPage() {
         {/* Header */}
         <div className="mb-16 animate-fade-in text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-balance hover:scale-105 transition-transform inline-block">
-            Skills & Expertise
+            Skills & Extracurricular Activities
           </h1>
           <p className="text-xl text-muted-foreground text-pretty">
-            Technical proficiencies and professional competencies
+            Technical proficiencies, professional competencies, and achievements beyond academics
           </p>
         </div>
 
@@ -144,6 +147,99 @@ export default function SkillsPage() {
               <Badge variant="secondary" className="hover:scale-110 transition-transform cursor-default">
                 Professional Proficiency
               </Badge>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Extracurricular Activities Section */}
+        <div className="mt-20">
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
+              Extracurricular Activities
+            </h2>
+            <p className="text-lg text-muted-foreground text-pretty">
+              Competitions, achievements, and activities beyond academics
+            </p>
+          </div>
+
+          {/* Activities */}
+          <div className="space-y-8">
+            {extracurricularData.map((activity, index) => (
+              <Card
+                key={index}
+                className="animate-slide-in-up hover:shadow-lg transition-shadow"
+                style={{ animationDelay: `${0.1 + index * 0.1}s` }}
+              >
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3">
+                    <div className="p-2 rounded-lg bg-primary/10">
+                      <Trophy className="h-5 w-5 text-primary" />
+                    </div>
+                    {activity.activity}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
+                    <Calendar className="h-4 w-4" />
+                    <span>{activity.period}</span>
+                    <Badge variant="secondary" className="ml-2">
+                      {activity.role}
+                    </Badge>
+                  </div>
+                  {activity.description && (
+                    <p className="text-muted-foreground mb-4 leading-relaxed">{activity.description}</p>
+                  )}
+                  {activity.achievements && activity.achievements.length > 0 && (
+                    <div className="space-y-2">
+                      <p className="font-semibold text-sm mb-2">Key Achievements:</p>
+                      {activity.achievements.map((achievement, achIndex) => (
+                        <div key={achIndex} className="flex gap-3">
+                          <div className="mt-1.5 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
+                          <span className="text-sm text-muted-foreground">{achievement}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Highlights */}
+          <Card className="mt-12 animate-slide-in-up border-primary/20" style={{ animationDelay: "0.4s" }}>
+            <CardHeader>
+              <CardTitle>Notable Achievements</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div className="flex gap-3">
+                  <div className="mt-1.5 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold mb-1">Runner Up - Divisional Quiz Competition 2017</p>
+                    <p className="text-sm text-muted-foreground">
+                      Secured second position in the divisional level quiz competition
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="mt-1.5 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold mb-1">Multiple Quiz Competition Wins</p>
+                    <p className="text-sm text-muted-foreground">
+                      Won prizes in numerous quizzing competitions throughout school years
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="mt-1.5 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold mb-1">8+ Years of Active Participation</p>
+                    <p className="text-sm text-muted-foreground">
+                      Consistently participated in Mathematics Olympiad and Quiz competitions from 2012 to 2020
+                    </p>
+                  </div>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </div>
