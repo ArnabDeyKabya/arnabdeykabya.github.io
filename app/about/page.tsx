@@ -133,7 +133,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Experience */}
+        {/* Experience          */}
         <div className="mt-12">
           <h2 className="text-3xl font-bold mb-8 animate-slide-in-up" style={{ animationDelay: "1s" }}>
             Experience
