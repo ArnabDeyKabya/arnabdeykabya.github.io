@@ -28,7 +28,7 @@ export const projects = [
     techStack: ["C++", "Flex", "Bison"],
     year: "2024",
     repoUrl: "https://github.com/ArnabDeyKabya/Compiler-CSE-310",
-    image: "/my-portfolio/compiler-code-syntax-tree-visualization.jpg",
+    image: "/arnabdeykabya.github.io/compiler-code-syntax-tree-visualization.jpg",
   },
   {
     title: "Movie Recommender System",
