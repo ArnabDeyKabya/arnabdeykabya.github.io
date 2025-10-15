@@ -13,7 +13,7 @@ export const projects = [
     year: "2025",
     repoUrl: "https://github.com/ArnabDeyKabya/Dormie",
     demoUrl: "#",
-    image: "/my-portfolio/modern-hall-management-system-dashboard.jpg",
+    image: "/modern-hall-management-system-dashboard.jpg",
   },
   {
     title: "C Compiler",
@@ -43,7 +43,7 @@ export const projects = [
     techStack: ["Python", "Scikit-learn", "Pandas", "NumPy"],
     year: "2024",
     repoUrl: "https://github.com/ArnabDeyKabya/Movie-Recommender-System",
-    image: "/my-portfolio/movie-recommendation-machine-learning-interface.jpg",
+    image: "/movie-recommendation-machine-learning-interface.jpg",
   },
   {
     title: "Kothin Train",
@@ -54,7 +54,7 @@ export const projects = [
     techStack: ["Python", "Django", "Bootstrap", "HTML", "CSS", "SQL", "Oracle", "REST API"],
     year: "2023",
     repoUrl: "https://github.com/chottosid/Kothin-Trains",
-    image: "/my-portfolio/train-ticket-booking-web-application.jpg",
+    image: "/train-ticket-booking-web-application.jpg",
   },
   {
     title: "TeXla",
@@ -69,7 +69,7 @@ export const projects = [
     techStack: ["Arduino", "ATmega32", "Bluetooth Module"],
     year: "2024",
     repoUrl: "#",
-    image: "/my-portfolio/arduino-robot-car-gyroscope-control.jpg",
+    image: "/arduino-robot-car-gyroscope-control.jpg",
   },
   {
     title: "Movie Database",
@@ -80,7 +80,7 @@ export const projects = [
     techStack: ["Java", "JavaFX", "CSS"],
     year: "2022",
     repoUrl: "https://github.com/ArnabDeyKabya/Movie-Database-2--2-JavaFx-Project-",
-    image: "/my-portfolio/movie-database-desktop-application-interface.jpg",
+    image: "/movie-database-desktop-application-interface.jpg",
   },
   {
     title: "Arrow Shooter",
@@ -91,6 +91,6 @@ export const projects = [
     techStack: ["C", "C++", "OpenGL"],
     year: "2022",
     repoUrl: "https://github.com/ArnabDeyKabya/Dart-Game-1---1-project-",
-    image: "/my-portfolio/opengl-archer-game-3d-graphics.jpg",
+    image: "/opengl-archer-game-3d-graphics.jpg",
   },
 ]
