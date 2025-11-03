@@ -11,7 +11,7 @@ export const projects = [
     ],
     techStack: ["Spring Boot", "PostgreSQL", "Docker", "React", "REST API", "SSLCommerz"],
     year: "2025",
-    repoUrl: "https://github.com/ArnabDeyKabya/Dormie",
+    repoUrl: "https://github.com/Mushfiqur6087/Dormie",
     demoUrl: "#",
     image: "/modern-hall-management-system-dashboard.jpg",
   },
