@@ -33,10 +33,11 @@ export const research = {
       title: "Seg2Reg-Net: An Explainable AI Analysis of Predictive Limitations in Cattle Weight Estimation",
       authors: "Arnab Dey, et al.",
       venue: "NSysS 2025",
-      status: "Under Review",
+      status: "Published",
       year: "2025",
       description:
         "Proposed Seg2Reg-Net, an end-to-end Attention U-Net + regression framework for cattle weight estimation. Incorporated explainable AI (LIME, SHAP) to expose predictive limitations and spurious correlations.",
+      link: "https://dl.acm.org/doi/10.1145/3777555.3777559",
     },
   ],
 }
@@ -73,12 +74,12 @@ export const publications = [
     title: "Seg2Reg-Net: An Explainable AI Analysis of Predictive Limitations in Cattle Weight Estimation",
     authors: "Arnab Dey, et al.",
     venue: "NSysS 2025",
-    status: "Under Review",
+    status: "Published",
     year: "2025",
     highlights: [
       "Proposed Seg2Reg-Net, an end-to-end Attention U-Net + regression framework for cattle weight estimation",
       "Incorporated explainable AI (LIME, SHAP) to expose predictive limitations and spurious correlations",
     ],
-    link: "",
+    link: "https://dl.acm.org/doi/10.1145/3777555.3777559",
   },
 ]
