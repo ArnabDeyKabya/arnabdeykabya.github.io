@@ -56,16 +56,16 @@ export const researchInterests = [
     topics: ["Deep Learning", "Explainable AI", "Healthcare AI", "Biometric Authentication"],
   },
   {
-    area: "Generative AI",
+    area: "Natural Language Processing",
     description:
-      "Large Language Models, prompt engineering, and secure deployment of generative models for real-world tasks.",
-    topics: ["Large Language Models", "Prompt Engineering", "Secure AI Deployment"],
-  },
-  {
-    area: "5G and Next-Generation Networks",
-    description:
-      "Security, low-latency communication, and intelligent applications leveraging edge computing and IoT integration.",
-    topics: ["5G Security", "Edge Computing", "IoT Integration", "Low-Latency Systems"],
+      "Efficient and verifiable machine unlearning techniques, privacy-preserving model updates, and mitigation of sensitive or harmful information in trained models.",
+    topics: [
+      "Machine Unlearning",
+      "Data Privacy",
+      "Model Sanitization",
+      "Verifiable Unlearning",
+      "Trustworthy AI",
+    ],
   },
 ]
 
@@ -82,4 +82,17 @@ export const publications = [
     ],
     link: "https://dl.acm.org/doi/10.1145/3777555.3777559",
   },
-]
+  {
+    title: "Seeing the Invisible: Grad-CAM-Driven Detection of Sparse and Imperceptible Backdoor Attacks",
+    authors: "Arnab Dey, et al.",
+    venue: "QPAIN 2026",
+    status: "Under Review",
+    year: "2025",
+    highlights: [
+      "Proposed a Grad-CAM–based model comparison framework for detecting sparse and invisible backdoor attacks (SIBA)",
+      "Extracted statistical, spatial, similarity, and gradient features from attention differences for supervised detection",
+    ],
+    link: "", // add IEEE Xplore / proceedings link if available
+  },
+];
+
